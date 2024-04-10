@@ -35,3 +35,26 @@ def validate_transaction(transaction_type, amount, account_data):
             return "Insufficient Balance", 403
     return None, 200
 
+class BankAccount(BaseHTTPRequestHandler):
+    def set_headers(self, status=200):
+        self.send_response(status)
+        self.send_header('Content-type', 'application/json')
+        self.end_headers()
+
+    def get_data(self):
+        if self.path == '/balance':
+            self.balance()
+        else:
+            self.set_headers(404)
+            self.wfile.write(json.dumps({'error': 'Not found'}).encode())
+    
+    def post_data(self):
+        if self.path in ['/deposit', '/withdraw']:
+            content_length = int(self.headers['Content-Length'])
+            post_data = self.rfile.read(content_length)
+            self.transaction(post_data, self.path.replace('/', ''))
+        else:
+            self.set_headers(404)
+            self.wfile.write(json.dumps({'error': 'Not found'}).encode())
+
+    
