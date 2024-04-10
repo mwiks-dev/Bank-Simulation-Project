@@ -59,7 +59,7 @@ The backend functionality is tested using Python's `unittest` framework. Tests a
 
 - **Test Setup**: Each test case starts with setting up a connection to the backend server.
 - **Test Cases**: Include testing each endpoint for success responses and handling errors, such as exceeding transaction limits.
-- **Running Tests**: Tests can be executed by running `python bank_tests.py` with the backend server running.
+- **Running Tests**: Tests can be executed by running `python3 bank_tests.py` with the backend server running.
 
 ### Frontend Tests
 
@@ -67,4 +67,4 @@ Frontend testing is manual, involving interactions with the web interface to ens
 
 ## Conclusion
 
-This Bank Account Service project demonstrates a basic full-stack application with a Python backend and an HTML/JavaScript frontend. It showcases REST API design, handling HTTP requests in Python, and interacting with a backend server using AJAX in the frontend. The project includes basic transaction validation and unit tests for the backend, providing a foundation for more complex applications.
+This Bank Account Service project demonstrates a basic full-stack application with a Python backend and an HTML/JavaScript frontend and vanilla python GUI. It showcases REST API design, handling HTTP requests in Python, and interacting with a backend server using AJAX in the frontend. The project includes basic transaction validation and unit tests for the backend.
