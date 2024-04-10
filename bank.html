@@ -11,13 +11,15 @@
         .form-group label { display: block; margin-bottom: 5px; }
         .form-group input, .form-group button { padding: 10px; }
         .form-group button { cursor: pointer; }
-        #balanceDisplay { margin: 20px 0; }
+        #balanceDisplay { margin: 20px 0; font-weight: 600; }
+        #depohead {font-weight: 600;}
+        #validations { margin: 20px}
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Bank Account Dashboard</h2>
-        <div id="balanceDisplay">Balance: <span id="balance">0</span></div>
+        <div id="balanceDisplay">Current Account Balance: <span id="balance">0</span></div>
         <div class="form-group">
             <label for="depositAmount">Deposit Amount</label>
             <input type="number" id="depositAmount" />
@@ -29,6 +31,16 @@
             <button onclick="withdraw()">Withdraw</button>
         </div>
         <button onclick="getBalance()">Refresh Balance</button>
+        <div id="validations">Enter a valid amount for deposit or withdrawal.
+            <p id="depohead">Deposit limits:</p>
+            <p>Max per transaction: Kes. 40K</p> 
+            <p>Max frequency: 4 transactions/day</p>
+            <p>Max for the day: Kes. 150K</p>
+            <p id="depohead">Withdrawal limits:</p>
+            <p>Max per transaction: Kes. 20K</p>
+            <p>Max frequency: 3 transactions/day</p>
+            <p>Max for the day: Kes. 50K</p>
+        </div>
     </div>
 
     <script src="bank.js"></script>

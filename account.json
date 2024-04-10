@@ -1,1 +1,1 @@
-{"balance": 450, "transactions": [{"type": "deposit", "amount": 100, "date": "2024-04-10"}, {"type": "withdraw", "amount": 50, "date": "2024-04-10"}, {"type": "deposit", "amount": 100, "date": "2024-04-10"}, {"type": "withdraw", "amount": 150, "date": "2024-04-10"}, {"type": "withdraw", "amount": 50, "date": "2024-04-10"}]}
+{"balance": 700, "transactions": [{"type": "deposit", "amount": 100, "date": "2024-04-10"}, {"type": "withdraw", "amount": 50, "date": "2024-04-10"}]}
