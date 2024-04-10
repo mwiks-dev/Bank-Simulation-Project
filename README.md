@@ -1,6 +1,8 @@
 # Bank Account Service Project
 
-This project simulates a simple Bank Account Service, allowing users to interact with a bank account through a web interface. Users can check their balance, deposit money, and withdraw money within predefined limits. The backend is built with vanilla Python using the `http.server` module, while the frontend is developed with basic HTML and JavaScript. This document details the setup, functionality, and testing approach of the project.
+This project simulates a simple Bank Account Service, allowing users to interact with a bank account through a web interface. Users can check their balance, deposit money, and withdraw money within predefined limits. The backend is built with vanilla Python using the `http.server` module, while the frontend is developed with basic HTML and JavaScript. If you are having trouble interacting with the HTML and JavaScript frontend you can test out the `bank_frontend.py` which is created using the `tkinter` module.
+Install `tkinter` using the command `sudo apt-get install python-tk`.
+This document details the setup, functionality, and testing approach of the project.
 
 ## Backend
 
