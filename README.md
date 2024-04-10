@@ -22,11 +22,11 @@ The backend server is a lightweight HTTP server written in Python. It provides R
 
 ### Transaction Limits
 
-- Maximum deposit per transaction: KES 40,000.
-- Maximum deposit per day: KES 150,000.
+- Maximum deposit per transaction: Ksh. 40,000.
+- Maximum deposit per day: Ksh. 150,000.
 - Maximum deposit transactions per day: 4.
-- Maximum withdrawal per transaction: KES 20,000.
-- Maximum withdrawal per day: KES 50,000.
+- Maximum withdrawal per transaction: Ksh. 20,000.
+- Maximum withdrawal per day: Ksh. 50,000.
 - Maximum withdrawal transactions per day: 3.
 - Withdrawals cannot exceed the current balance.
 
