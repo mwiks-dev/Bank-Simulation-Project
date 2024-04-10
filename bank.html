@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account Service</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: auto; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; }
+        .form-group input, .form-group button { padding: 10px; }
+        .form-group button { cursor: pointer; }
+        #balanceDisplay { margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bank Account Dashboard</h2>
+        <div id="balanceDisplay">Balance: <span id="balance">0</span></div>
+        <div class="form-group">
+            <label for="depositAmount">Deposit Amount</label>
+            <input type="number" id="depositAmount" />
+            <button onclick="deposit()">Deposit</button>
+        </div>
+        <div class="form-group">
+            <label for="withdrawAmount">Withdraw Amount</label>
+            <input type="number" id="withdrawAmount" />
+            <button onclick="withdraw()">Withdraw</button>
+        </div>
+        <button onclick="getBalance()">Refresh Balance</button>
+    </div>
+
+    <script src="bank.js"></script>
+</body>
+</html>
