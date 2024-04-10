@@ -1,7 +1,6 @@
 # Bank Account Service Project
 
-This project simulates a simple Bank Account Service, allowing users to interact with a bank account through a web interface. Users can check their balance, deposit money, and withdraw money within predefined limits. The backend is built with vanilla Python using the `http.server` module, while the frontend is developed with basic HTML and JavaScript. If you are having trouble interacting with the HTML and JavaScript frontend you can test out the `bank_frontend.py` which is created using the `tkinter` module.
-Install `tkinter` using the command `sudo apt-get install python-tk`.
+This project simulates a simple Bank Account Service, allowing users to interact with a bank account through a web interface. Users can check their balance, deposit money, and withdraw money within predefined limits. The backend is built with vanilla Python using the `http.server` module, while the frontend is developed with basic HTML and JavaScript.
 This document details the setup, functionality, and testing approach of the project.
 
 ## Backend
@@ -33,7 +32,9 @@ The backend server is a lightweight HTTP server written in Python. It provides R
 
 ## Frontend
 
-The frontend is a simple HTML page with JavaScript that interacts with the backend via AJAX requests. It provides a user-friendly interface for the account operations.
+There are two frontend available:
+- One frontend is a simple HTML page with JavaScript that interacts with the backend via AJAX requests. It provides a user-friendly interface for the account operations.
+- The second frontend is under the `bank_frontend.py` which is created using the `tkinter` module.
 
 ### Features
 
@@ -42,9 +43,13 @@ The frontend is a simple HTML page with JavaScript that interacts with the backe
 - **Withdraw Money**: Users can input an amount to withdraw from their account.
 
 ### Running the Frontend
-
+1.Frontend One
 - Open the `bank.html` file in a web browser to access the frontend.
 - Ensure the backend server is running as the frontend needs to communicate with it.
+
+2. Frontend Two
+- Install `tkinter` using the command `sudo apt-get install python-tk`.
+- Run the file `bank_frontend.py` while the backend server is running as the two need to communicate.
 
 ## Testing
 
