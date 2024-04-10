@@ -57,4 +57,42 @@ class BankAccount(BaseHTTPRequestHandler):
             self.set_headers(404)
             self.wfile.write(json.dumps({'error': 'Not found'}).encode())
 
-    
+    def balance(self):
+        self.set_headers(200)
+        account_data = account_info()
+        self.wfile.write(json.dumps({'balance': account_data['balance']}).encode())
+
+    def transaction(self, post_data, transaction_type):
+        try:
+            data = json.loads(post_data)
+            amount = data.get('amount')
+            if amount is None:
+                raise ValueError("Amount is required")
+
+            account_data = account_info()
+            error_message, status_code = validate_transaction(transaction_type, amount, account_data)
+            if status_code != 200:
+                self.set_headers(status_code)
+                self.wfile.write(json.dumps({'error': error_message}).encode())
+                return
+
+            if transaction_type == "deposit":
+                account_data['balance'] += amount
+            elif transaction_type == "withdraw":
+                account_data['balance'] -= amount
+
+            account_data['transactions'].append({
+                "type": transaction_type,
+                "amount": amount,
+                "date": datetime.now().strftime('%Y-%m-%d')
+            })
+
+            load_account(account_data)
+            self.set_headers(200)
+            self.wfile.write(json.dumps({"message": "Transaction successful", "balance": account_data['balance']}).encode())
+
+        except ValueError as e:
+            self.set_headers(400)
+            self.wfile.write(json.dumps({'error': str(e)}).encode())
+
+
