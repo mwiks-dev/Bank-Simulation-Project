@@ -32,7 +32,7 @@ The backend server is a lightweight HTTP server written in Python. It provides R
 
 ## Frontend
 
-There are two frontend available:
+There are two frontends available:
 - One frontend is a simple HTML page with JavaScript that interacts with the backend via AJAX requests. It provides a user-friendly interface for the account operations.
 - The second frontend is under the `bank_frontend.py` which is created using the `tkinter` module.
 
